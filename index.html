@@ -12,18 +12,23 @@
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="page-layout">
 <header id="main-header" class="site-header">
-    <div class="container header-content">
-        <a href="index.html" class="logo">GYMZONE</a>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="upper.html">Upper Body</a></li>
-                <li><a href="lower.html">Lower Body</a></li>
-                <li><a href="crossfit.html">CrossFit</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GYMZONE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="upper.html">Upper Body</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lower.html">Lower Body</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crossfit.html">CrossFit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 <aside class="sidebar">
     <p class="sidebar-label">TRAINING FOCUS</p>
@@ -44,7 +49,7 @@
                     GYMZONE is a simple fitness website that
                     helps you learn exercises and proper technique.
                 </p>
-                <a href="#categories" class="btn">
+                <a href="#categories" class="btn btn-primary btn-lg">
                     Explore Exercises
                 </a>
             </div>
@@ -56,11 +61,11 @@
             <h2 class="section-title">
                 TRAINING CATEGORIES
             </h2>
-            <div class="card-grid row g-4">
-                <a href="upper.html" class="card col-12 col-md-6 col-lg-4">
+            <div class="card-grid">
+                <a href="upper.html" class="media-card">
                     <img src="images/Bench Press.gif"
                          alt="Upper body training">
-                    <div class="card-content">
+                    <div class="media-card-content">
                         <h3>Upper Body</h3>
                         <p>
                             Train your chest, back,
@@ -69,10 +74,10 @@
                         <span class="card-button">View exercises</span>
                     </div>
                 </a>
-                <a href="lower.html" class="card col-12 col-md-6 col-lg-4">
+                <a href="lower.html" class="media-card">
                     <img src="images/Leg Press.gif"
                          alt="Lower body training">
-                    <div class="card-content">
+                    <div class="media-card-content">
                         <h3>Lower Body</h3>
                         <p>
                             Build strong legs,
@@ -81,10 +86,10 @@
                         <span class="card-button">View exercises</span>
                     </div>
                 </a>
-                <a href="crossfit.html" class="card col-12 col-md-6 col-lg-4">
+                <a href="crossfit.html" class="media-card">
                     <img src="images/Burpees.gif"
                          alt="CrossFit training">
-                    <div class="card-content">
+                    <div class="media-card-content">
                         <h3>CrossFit</h3>
                         <p>
                             High intensity exercises
@@ -93,6 +98,64 @@
                         <span class="card-button">View exercises</span>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+    <section class="section gallery-section" id="workout-carousel">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-12 col-lg-8">
+                    <h2 class="section-title mb-4">MOVEMENT IN MOTION</h2>
+                    <div id="gymCarousel" class="carousel slide carousel-shell" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#gymCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/Barbell-Bench-Press.gif" alt="Barbell bench press"><div class="carousel-caption"><h3>Bench Press</h3></div></div>
+                            <div class="carousel-item"><img src="images/Pull-up.gif" alt="Pull-up exercise"><div class="carousel-caption"><h3>Pull-Ups</h3></div></div>
+                            <div class="carousel-item"><img src="images/Overhead Press.gif" alt="Overhead press"><div class="carousel-caption"><h3>Overhead Press</h3></div></div>
+                            <div class="carousel-item"><img src="images/Barbell Squat.gif" alt="Barbell squat"><div class="carousel-caption"><h3>Barbell Squat</h3></div></div>
+                            <div class="carousel-item"><img src="images/Leg Press.gif" alt="Leg press"><div class="carousel-caption"><h3>Leg Press</h3></div></div>
+                            <div class="carousel-item"><img src="images/Romanian Deadlift.gif" alt="Romanian deadlift"><div class="carousel-caption"><h3>Romanian Deadlift</h3></div></div>
+                            <div class="carousel-item"><img src="images/Burpees.gif" alt="Burpees"><div class="carousel-caption"><h3>Burpees</h3></div></div>
+                            <div class="carousel-item"><img src="images/Kettlebell Swing.gif" alt="Kettlebell swing"><div class="carousel-caption"><h3>Kettlebell Swing</h3></div></div>
+                            <div class="carousel-item"><img src="images/Triceps Pushdown.gif" alt="Triceps pushdown"><div class="carousel-caption"><h3>Triceps Pushdown</h3></div></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#gymCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#gymCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mt-lg-5 px-sm-2">
+                    <div class="card bootstrap-card h-100">
+                        <div class="card-body p-4">
+                            <h2 class="card-title h3">TRAIN WITH PURPOSE</h2>
+                            <p class="card-text">Use clear technique guides to build a routine that fits your goals.</p>
+                            <div class="btn-group mt-3" role="group" aria-label="Workout categories">
+                                <a href="upper.html" class="btn btn-primary btn-sm">Upper</a>
+                                <a href="lower.html" class="btn btn-secondary btn-sm">Lower</a>
+                                <a href="crossfit.html" class="btn btn-outline-primary btn-sm">WOD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title mb-4">START WITH A FOCUS</h2>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4"><div class="card bootstrap-card h-100"><img src="images/Bench Press.gif" class="card-img-top" alt="Upper body training"><div class="card-body"><h3 class="card-title h4">Upper Body</h3><p class="card-text">Build strength through your chest, back, shoulders and arms.</p><a href="upper.html" class="btn btn-outline-primary btn-sm">Learn more</a></div></div></div>
+                <div class="col-12 col-sm-6 col-lg-4"><div class="card bootstrap-card h-100"><img src="images/Leg Press.gif" class="card-img-top" alt="Lower body training"><div class="card-body"><h3 class="card-title h4">Lower Body</h3><p class="card-text">Train powerful legs with focused technique and consistency.</p><a href="lower.html" class="btn btn-outline-primary btn-sm">Learn more</a></div></div></div>
+                <div class="col-12 col-sm-6 col-lg-4"><div class="card bootstrap-card h-100"><img src="images/Burpees.gif" class="card-img-top" alt="CrossFit training"><div class="card-body"><h3 class="card-title h4">CrossFit</h3><p class="card-text">Combine conditioning, strength and movement in one session.</p><a href="crossfit.html" class="btn btn-outline-primary btn-sm">Learn more</a></div></div></div>
             </div>
         </div>
     </section>
@@ -200,6 +263,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </body>
 </html>

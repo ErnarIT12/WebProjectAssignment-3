@@ -126,6 +126,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer-team p:first-child { color: var(--ink); }
 .footer-contact, .team-link { color: var(--orange); }
 
+/* Bootstrap components keep the GYMZONE visual language. */
+.navbar { --bs-navbar-color: var(--muted); --bs-navbar-hover-color: var(--ink); --bs-navbar-brand-color: var(--ink); --bs-navbar-brand-hover-color: var(--orange); --bs-navbar-toggler-border-color: var(--line); padding: 0; }
+.navbar-brand { color: var(--ink); font-family: "Space Grotesk", sans-serif; font-size: 1.7rem; font-weight: 700; letter-spacing: -0.08em; }
+.navbar-brand::before { display: inline-block; width: 10px; height: 10px; margin-right: 8px; background: var(--orange); content: ""; }
+.navbar .nav-link { color: var(--muted); font-family: "Space Grotesk", sans-serif; font-size: 0.84rem; font-weight: 600; }
+.navbar .nav-link:hover, .navbar .nav-link:focus-visible, .navbar .nav-link.active { color: var(--ink); }
+.navbar-toggler { padding: 6px 9px; }
+.navbar-toggler-icon { filter: invert(1); }
+.btn-primary { --bs-btn-color: #10130f; --bs-btn-bg: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-hover-color: #10130f; --bs-btn-hover-bg: var(--orange-dark); --bs-btn-hover-border-color: var(--orange-dark); }
+.btn-secondary { --bs-btn-color: var(--ink); --bs-btn-bg: var(--green); --bs-btn-border-color: var(--line); --bs-btn-hover-color: var(--ink); --bs-btn-hover-bg: #2b352b; --bs-btn-hover-border-color: var(--orange); }
+.btn-outline-primary { --bs-btn-color: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-hover-color: #10130f; --bs-btn-hover-bg: var(--orange); --bs-btn-hover-border-color: var(--orange); }
+.bootstrap-card { border: 1px solid var(--line); border-radius: 0; background: var(--surface); color: var(--ink); }
+.bootstrap-card .card-img-top { height: 180px; object-fit: cover; }
+.bootstrap-card .card-body { display: flex; flex-direction: column; }
+.bootstrap-card .btn { align-self: flex-start; margin-top: auto; }
+.carousel-shell { overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.carousel-shell .carousel-item img { height: 420px; object-fit: cover; }
+.carousel-caption { right: 0; bottom: 0; left: 0; padding: 35px 20px 18px; background: linear-gradient(transparent, rgba(9, 11, 10, 0.9)); text-align: left; }
+.carousel-caption h3 { margin: 0; color: #fff; }
+
+/* Assignment 3 card group: this layout is intentionally not Bootstrap-driven. */
+.media-card-group { display: flex; flex-wrap: wrap; gap: 25px; }
+.media-card { display: flex; flex: 1 1 30%; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.media-card img { height: 210px; object-fit: cover; }
+.media-card-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 23px; }
+.media-card-content h3 { margin-bottom: 8px; font-size: 1.35rem; }
+.media-card-content p { color: var(--muted); }
+.media-card-content .btn { margin-top: auto; }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
@@ -142,6 +171,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .card-grid > .card:not([class*="col-"]) { flex-basis: 100%; }
     .footer-team { text-align: left; }
+    .media-card { flex-basis: calc(50% - 13px); }
+    .hero h1, .page-title h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); }
+    .section-title { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+    .carousel-shell .carousel-item img { height: 330px; }
 }
 
 @media (max-width: 520px) {
@@ -156,4 +189,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .profile-img { width: 84px; height: 84px; }
     .workout-table { font-size: 0.82rem; }
     .workout-table th, .workout-table td { padding: 10px 8px; }
+    .media-card { flex-basis: 100%; }
+    .hero h1, .page-title h1 { font-size: 3rem; }
+    .section-title { font-size: 1.9rem; }
+    .carousel-shell .carousel-item img { height: 250px; }
 }
