@@ -21,7 +21,7 @@ a { color: inherit; text-decoration: none; }
 a:hover { color: var(--orange-dark); }
 img { display: block; width: 100%; height: auto; }
 
-.skip-link { position: absolute; top: 10px; left: 10px; z-index: 10; padding: 8px 12px; background: var(--orange); color: #fff; transform: translateY(-160%); }
+.skip-link { position: absolute; top: 10px; left: 10px; z-index: 10; padding: 8px 12px; background: var(--orange); color: #10130f; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 .container { width: min(90%, 1180px); max-width: none; margin: 0 auto; }
@@ -49,9 +49,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero h1 { max-width: 520px; margin-bottom: 22px; color: var(--ink); font-size: clamp(3.4rem, 7vw, 6.8rem); line-height: 0.92; letter-spacing: -0.08em; }
 .hero p { max-width: 410px; margin-bottom: 30px; color: var(--muted); font-size: 1.05rem; }
 .hero img { max-height: 540px; aspect-ratio: 4 / 5; border: 10px solid #202720; object-fit: cover; object-position: center; }
-.btn { display: inline-flex; align-items: center; gap: 15px; padding: 13px 18px; background: var(--orange); color: #fff; font-size: 0.9rem; font-weight: 700; transition: background-color 180ms ease, transform 180ms ease; }
+.btn { display: inline-flex; align-items: center; gap: 10px; border-radius: 0; font-size: 0.9rem; font-weight: 700; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease; }
 .btn::after { content: "↘"; font-size: 1.1rem; }
-.btn:hover { background: var(--orange-dark); color: #fff; transform: translateY(-2px); }
+.btn:hover { transform: translateY(-2px); }
 
 .section { padding: clamp(58px, 8vw, 96px) 0; }
 .section-title { margin-bottom: 35px; color: var(--ink); font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1; letter-spacing: -0.07em; text-align: left; }
@@ -68,8 +68,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .motivation, .team-section, .contact-section { background: #111512; }
 .motivation { text-align: left; }
 .motivation img { max-width: 760px; height: 330px; margin: 0 0 28px; object-fit: cover; }
-.motivation h2 { max-width: 850px; color: var(--ink); font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.05; letter-spacing: -0.06em; }
-.motivation p { margin-top: 15px; color: var(--orange-dark); font-weight: 700; }
+.motivation blockquote { max-width: 850px; margin: 0; color: var(--ink); font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 600; line-height: 1.05; letter-spacing: -0.06em; }
+.motivation cite { display: block; margin-top: 15px; color: var(--orange-dark); font-style: normal; font-weight: 700; }
 .team-intro { max-width: 600px; margin: -14px 0 34px; }
 .team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; max-width: 900px; }
 .team-card { display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 20px; padding: 22px; border: 1px solid var(--line); background: var(--surface); }
@@ -98,21 +98,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .exercise-content ul { padding-left: 20px; }
 
 .workout-table { width: 100%; margin-top: 30px; border-collapse: collapse; background: var(--surface); font-variant-numeric: tabular-nums; }
+.workout-table caption { padding: 0 0 10px; caption-side: top; color: var(--muted); text-align: left; }
 .workout-table th, .workout-table td { padding: 14px; border: 1px solid var(--line); text-align: left; }
 .workout-table th { background: var(--orange); color: #10130f; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .contact-grid { align-items: start; }
 .contact-title { margin-bottom: 18px; }
-.contact-subtitle { margin-top: 28px; color: var(--green); font-size: 1.35rem; }
+.contact-subtitle { margin-top: 28px; color: var(--orange); font-size: 1.35rem; }
 .steps-list { margin: 12px 0 22px; padding-left: 24px; color: var(--muted); }
 .steps-list li { padding: 4px 0; }
 
 #contact-form { display: flex; flex-direction: column; gap: 9px; padding: clamp(22px, 4vw, 36px); border: 1px solid var(--line); border-radius: 0; background: var(--surface); }
 #contact-form h2 { margin-bottom: 10px; color: var(--orange); font-size: 1.8rem; }
 #contact-form label { margin-top: 5px; color: var(--ink); font-size: 0.88rem; font-weight: 700; }
-#contact-form input, #contact-form select, #contact-form textarea { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 0; background: #0b0d0c; color: var(--ink); font: inherit; }
-#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(215, 255, 63, 0.14); }
-#contact-form button { margin-top: 12px; padding: 13px 18px; border: 0; border-radius: 0; background: var(--orange); color: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 700; transition: background-color 180ms ease, transform 180ms ease; }
+#contact-form legend { color: var(--ink); font-size: 0.88rem; font-weight: 700; }
+#contact-form input:not([type="checkbox"]):not([type="radio"]), #contact-form select, #contact-form textarea { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 0; background: #0b0d0c; color: var(--ink); font: inherit; }
+#contact-form input:not([type="checkbox"]):not([type="radio"]):focus, #contact-form select:focus, #contact-form textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(215, 255, 63, 0.14); }
+#contact-form .form-check-input { border-color: var(--muted); background-color: #0b0d0c; }
+#contact-form .form-check-input:checked { border-color: var(--orange); background-color: var(--orange); }
+#contact-form button { margin-top: 12px; padding: 13px 18px; border: 0; border-radius: 0; background: var(--orange); color: #10130f; cursor: pointer; font-size: 0.9rem; font-weight: 700; transition: background-color 180ms ease, transform 180ms ease; }
 #contact-form button:hover { background: var(--orange-dark); transform: translateY(-2px); }
+#contact-form .input-group-text { border-color: var(--line); border-radius: 0; background: var(--green); color: var(--ink); }
 
 #main-footer { grid-area: footer; margin-top: 0; padding: 48px 0 30px; border-top: 1px solid var(--line); background: #070908; color: var(--ink); }
 .footer-content { display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; align-items: start; gap: 36px; }
@@ -134,7 +139,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .navbar .nav-link:hover, .navbar .nav-link:focus-visible, .navbar .nav-link.active { color: var(--ink); }
 .navbar-toggler { padding: 6px 9px; }
 .navbar-toggler-icon { filter: invert(1); }
-.btn-primary { --bs-btn-color: #10130f; --bs-btn-bg: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-hover-color: #10130f; --bs-btn-hover-bg: var(--orange-dark); --bs-btn-hover-border-color: var(--orange-dark); }
+.btn-primary { --bs-btn-color: #10130f; --bs-btn-bg: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-hover-color: #10130f; --bs-btn-hover-bg: var(--orange-dark); --bs-btn-hover-border-color: var(--orange-dark); --bs-btn-active-color: #10130f; --bs-btn-active-bg: var(--orange-dark); --bs-btn-active-border-color: var(--orange-dark); }
 .btn-secondary { --bs-btn-color: var(--ink); --bs-btn-bg: var(--green); --bs-btn-border-color: var(--line); --bs-btn-hover-color: var(--ink); --bs-btn-hover-bg: #2b352b; --bs-btn-hover-border-color: var(--orange); }
 .btn-outline-primary { --bs-btn-color: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-hover-color: #10130f; --bs-btn-hover-bg: var(--orange); --bs-btn-hover-border-color: var(--orange); }
 .bootstrap-card { border: 1px solid var(--line); border-radius: 0; background: var(--surface); color: var(--ink); }
@@ -154,6 +159,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .media-card-content h3 { margin-bottom: 8px; font-size: 1.35rem; }
 .media-card-content p { color: var(--muted); }
 .media-card-content .btn { margin-top: auto; }
+.media-card .card-button { align-self: flex-start; padding-top: var(--bs-btn-padding-y); color: var(--orange); }
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
